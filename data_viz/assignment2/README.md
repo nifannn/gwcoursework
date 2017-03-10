@@ -1,5 +1,9 @@
 # Data Visualization Assignment 2
 
+### Intoduction
+* Data visualization home assignment
+* Webpage using node.js and D3.js
+
 ### Dataset
 
 * [Online Courses from Harvard and MIT](https://www.kaggle.com/edx/course-study)
