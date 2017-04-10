@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+	<title>Data Visualization Midterm Assignment</title>
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<meta name="description" content="test">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.71/jquery.csv-0.71.min.js"></script>
+    <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+
+    <script type="text/javascript"> // load the visualisation API
+     google.load('visualization', '1', { packages: ['corechart', 'controls'] });
+    </script>
+	<script type="text/javascript" src="js/googlechart_column.js"></script>
+	<script type="text/javascript" src="js/googlechart_line.js"></script>
+</head>
+
+<body>
+
+<header>
+	<div class="container">
+		<a href="index.html"><p>Data Visualization Midterm</p></a>
+		<nav>
+			<a href="tableau.html">Tableau</a>
+			<a href="d3.html">D3.js</a>
+			<a href="highcharts.html">HighCharts</a>
+			<a href="googlechart.html">Google Charts</a>
+			<a href="map.html">Map</a>
+		</nav>
+	</div>
+</header>
+
+<section>
+	<h2>Column Chart</h2><br>
+	<div id="columnchart"></div>
+</section>
+
+<section>
+	<h2>Line Chart</h2><br>
+	<div id="linechart"></div>
+</section>
+
+<footer>
+</footer>
+
+</body>
+</html>
