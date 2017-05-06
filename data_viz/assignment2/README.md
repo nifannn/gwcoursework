@@ -20,7 +20,7 @@
 
 ### Chart
 
-* Scaterplot : look for the relationship between percentage of audited and median age
+* Scatter chart: look for the relationship between percentage of audited and median age
 
 * Pie chart: participants enrolling in four course subjects
 
