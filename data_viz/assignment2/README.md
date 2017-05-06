@@ -3,6 +3,7 @@
 ### Intoduction
 * Data visualization home assignment
 * Webpage using node.js and D3.js
+* [Live demo](http://vanptain.io/portfolio/data_viz/assignment2/index.html)
 
 ### Dataset
 
