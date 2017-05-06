@@ -1,5 +1,5 @@
-var width2 = 1000,
-    height2 = 500,
+var width2 = window.innerWidth * 0.7,
+    height2 = window.innerHeight * 0.61,
     radius = Math.min(width2, height2 - 40) / 2;
 
 // set color
@@ -21,7 +21,7 @@ var pie = d3.layout.pie()
     .value(function(d) { return d['Participants (Course Content Accessed)']; });
 
 // add graph canvas
-var svg2 = d3.select("#pie").append("svg")
+var svg2 = d3.select("#pie_chart")
     .attr("width", width2)
     .attr("height", height2)
   .append("g")
@@ -56,8 +56,8 @@ d3.csv("dataset/pie.csv", type, function(error, data2) {
       })
       .attr("text-anchor", "middle")
       .attr("dy", ".35em")
-      .style("font-size", "14px")
-      .style("fill", "#ffffff")
+      .style("font-size", "12px")
+      .style("fill", "#000000")
       .text(function(d){ return d.data['Course Subject']; });
 });
 

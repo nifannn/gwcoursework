@@ -6,8 +6,8 @@ var parseDate = d3.time.format("%Y-%m").parse;
 
 // setup graph size
 var margin3 = {top: 20, right: 20, bottom: 30, left: 30},
-    width3 = 960 - margin3.left - margin3.right,
-    height3 = 500 - margin3.top - margin3.bottom;
+    width3 = window.innerWidth * 0.67 - margin3.left - margin3.right,
+    height3 = window.innerHeight * 0.61 - margin3.top - margin3.bottom;
 
 // setup x 
 var x = d3.scale.ordinal()
@@ -32,7 +32,7 @@ var yAxis3 = d3.svg.axis()
     .orient("left");
 
 // add graph canvas
-var svg3 = d3.select("#bar").append("svg")
+var svg3 = d3.select("#bar_chart")
     .attr("width", width3 + margin3.left + margin3.right)
     .attr("height", height3 + margin3.top + margin3.bottom)
   .append("g")

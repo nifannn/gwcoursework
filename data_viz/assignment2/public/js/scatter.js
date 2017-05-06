@@ -1,7 +1,6 @@
 var margin1 = {top: 20, right: 20, bottom: 30, left: 40},
-    width1 = 960 - margin1.left - margin1.right,
-    height1 = 500 - margin1.top - margin1.bottom;
-
+    width1 = window.innerWidth * 0.67 - margin1.left - margin1.right,
+    height1 = window.innerHeight * 0.61 - margin1.top - margin1.bottom;
 
 // setup x 
 var xValue = function(d) { return d["Median Age"];}, // data -> value
@@ -20,10 +19,10 @@ var cValue = function(d) { return d.Institution;},
     color1 = d3.scale.category10();
 
 // add the graph canvas
-var svg1 = d3.select("#scatter").append("svg")
+var svg1 = d3.select("#scatter_chart")
     .attr("width", width1 + margin1.left + margin1.right)
     .attr("height", height1 + margin1.top + margin1.bottom)
-  .append("g")
+    .append("g")
     .attr("transform", "translate(" + margin1.left + "," + margin1.top + ")");
 
 // load data
