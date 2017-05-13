@@ -1,0 +1,11 @@
+.column {
+  fill: steelblue;
+}
+
+.column:hover {
+  fill: brown;
+}
+
+.arc path {
+  stroke: #fff;
+}

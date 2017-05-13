@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Data Visualization Final Project</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/fonts/FontAwesome.otf">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/fonts/fontawesome-webfont.eot">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/fonts/fontawesome-webfont.svg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/fonts/fontawesome-webfont.ttf">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/fonts/fontawesome-webfont.woff">
+
+    <!-- Custom CSS -->
+    <link href="css/modern-business.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Slider CSS -->
+   <link href="css/rangeslider.css" rel="stylesheet">
+   <link href="css/slider.css" rel="stylesheet">
+
+    <!-- Chart CSS -->
+    <link href="css/d3.css" rel="stylesheet">
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+<script src="https://d3js.org/d3.v4.min.js"></script>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Data Visualization Final Project</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="about.html">About</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">D3js<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="#line">
+                                	Line Chart
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#column">
+                                	Column Chart
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#donut">
+                                	Donut Chart
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">HighCharts <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="highcharts.html#pie">
+                                Pie Chart</a>
+                            </li>
+                            <li>
+                                <a href="highcharts.html#bar">Bar Chart</a>
+                            </li>
+                            <li>
+                                <a href="highcharts.html#radar">Radar Chart</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+    
+    <!-- Page Content -->
+    <div class="container">
+
+        <!-- Line Chart Section -->
+        <div class="row" id="line">
+            <div class="col-lg-12">
+                <h2 class="page-header">
+                    Line Chart
+                </h2>
+                <h3 class="text-center">Video Game Sales by Year across Regions</h3>
+                <div class="btn-group">
+                <button type="button" class="btn btn-default" id="AllLineBtn">ALL</button>
+                <button type="button" class="btn btn-primary" id="GlobalBtn">Global</button>
+                <button type="button" class="btn btn-primary" id="NAbtn">North America</button>
+                <button type="button" class="btn btn-primary" id="EUbtn">Europe</button>
+                <button type="button" class="btn btn-primary" id="JPbtn">Japan</button>
+                <button type="button" class="btn btn-primary" id="OtherBtn">Other</button>
+                </div>
+                <div id="linechart">
+                    <svg></svg>
+                </div>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Column Chart Section -->
+        <div class="row" id="column">
+            <div class="col-lg-12">
+                <h2 class="page-header">Column Chart</h2>
+                <h3 class="text-center">Video Game Sales by Genres across Year</h3>
+                <div id="columnchart">
+                    <svg></svg>
+                </div>
+                <div class="slider">
+                <input type="range" value="2016" step="1" min="1980" max="2017">
+                <div class="range">
+                 <small class="min pull-left">1980</small>
+                 <small class="max pull-right">2017</small>
+                </div>
+                </div>
+            </div>       
+        </div>
+        <!-- /.row -->
+
+        <!-- Donut Chart Section -->
+        <div class="row" id="donut">
+            <div class="col-lg-12">
+                <h2 class="page-header">Donut Chart</h2>
+                <h3 class="text-center">Video Game Sales Proportion by Regions of Top5 Publishers</h3>
+                <div class="btn-group">
+                <button type="button" class="btn btn-default" id="AllDonutBtn">ALL</button>
+                <button type="button" class="btn btn-primary" id="NintendoBtn">Nintendo</button>
+                <button type="button" class="btn btn-primary" id="EAbtn">Electronic Arts</button>
+                <button type="button" class="btn btn-primary" id="ActBtn">Activision</button>
+                <button type="button" class="btn btn-primary" id="SonyBtn">Sony</button>
+                <button type="button" class="btn btn-primary" id="UbiBtn">Ubisoft</button>
+                </div>
+                <div id="donutchart">
+                    <svg></svg>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer>                    
+
+        </footer>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Chart JavaScript -->
+    <script src='js/d3/line.js'></script>
+    <script src="js/d3/column.js"></script>
+    <script src="js/d3/donut.js"></script>
+
+    <!-- Chart Control -->
+    <script src='js/d3/line_control.js'></script>
+    <script src="js/rangeslider.js"></script>
+    <script src="js/d3/slider.js"></script>
+    <script src="js/d3/donut_control.js"></script>
+
+</body>
+
+</html>

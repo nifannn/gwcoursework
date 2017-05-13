@@ -1,0 +1,24 @@
+.slider {
+  width: 70%;
+  margin: 8rem auto 0;
+  font-weight: 800;
+  font-family: "Open Sans", sans-serif;
+  color: #46b7d5;
+}
+
+.min {
+  padding-top: 5px;
+  padding-left: 10px;
+  color: #cccccc;
+}
+
+.max {
+  padding-top: 5px;
+  padding-right: 10px;
+  color: #cccccc;
+}
+
+output {
+  display: inline-block;
+  font-size: 2em;
+}
