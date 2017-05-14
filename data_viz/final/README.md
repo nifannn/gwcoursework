@@ -6,7 +6,7 @@
 
 * Webpage using Node.js, D3.js and HighCharts
 
-* Add Html controls to make graph interactive
+* Add html controls to make graph interactive
 
 * [Live demo](http://vanptain.io/portfolio/data_viz/final/index.html)
 
