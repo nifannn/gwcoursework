@@ -1,30 +1,41 @@
-# Data Visualization Assignment 2
+# Data Visualization Final Project
 
 ### Intoduction
 
-* Data visualization home assignment
+* Data visualization final project
 
-* Webpage using node.js and D3.js
+* Webpage using Node.js, D3.js and HighCharts
 
-* [Live demo](http://vanptain.io/portfolio/data_viz/assignment2/index.html)
+* Add Html controls to make graph interactive
 
-### Dataset
+* [Live demo](http://vanptain.io/portfolio/data_viz/final/index.html)
 
-* [Online Courses from Harvard and MIT](https://www.kaggle.com/edx/course-study)
+### Data
 
-### Data preparation:
+* [Video game sales](https://www.kaggle.com/gregorut/videogamesales)
 
-```
-/public/dataset/extraction.py
-```
+* preprocess: remove missing values
 
-### Chart
+### Charts
 
-* Scatter chart: look for the relationship between percentage of audited and median age
+#### D3js
 
-* Pie chart: participants enrolling in four course subjects
+* Line chart: video game sales from 1980 to 2017 in different regions
 
-* Bar chart: number of courses provides by Harvard and MIT separately in various months
+* Column chart: video game sales of different genres from 1980 to 2017 
 
-### Bootstrap Template
-[Agency](http://startbootstrap.com/template-overviews/agency/) Created by [Start Bootstrap](http://startbootstrap.com/)
+* Donut chart: sales proportion by region of video games published by top 5 publishers
+
+#### HighCharts
+
+* Pie chart: video game sales proportion by genre in different regions
+
+* Bar chart: video game sales of different platforms from 1980 to 2017
+
+* Radar chart: sales of different genres of video games published by top 5 publishers 
+
+### Tools
+
+* Bootstrap template: [Modern Business](https://startbootstrap.com/template-overviews/modern-business/) created by [Start Bootstrap](http://startbootstrap.com/)
+
+* [Rangeslider.js](http://rangeslider.js.org): [example](http://codepen.io/danielmdesigns/pen/rWqbam)
