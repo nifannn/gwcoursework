@@ -16,15 +16,15 @@
 
 ### Chart
 
-* Tableau
+* Tableau: bubble chart and box plot with Pokemon dataset 
 
-* D3js
+* D3js: line chart and stacked area chart with Harvard tuition dataset
 
-* HighCharts
+* HighCharts: column chart and bar chart using Harvard tuition dataset
 
-* Google Charts
+* Google Charts: column chart and line chart with Harvard tuition dataset
 
-* Map
+* Map: US map and world map using geojson
 
 ### Bootstrap Template
 [Agency](http://startbootstrap.com/template-overviews/agency/) Created by [Start Bootstrap](http://startbootstrap.com/)
