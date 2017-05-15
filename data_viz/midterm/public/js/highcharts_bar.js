@@ -1,7 +1,7 @@
     $(function () {
 
     // load data
-    $.get('data/tuition_graduate_5_years_trans.csv', function(data) {
+    $.get('dataset/tuition_graduate_5_years_trans.csv', function(data) {
         console.log('data ... ', data);
         
         // configure bar chart

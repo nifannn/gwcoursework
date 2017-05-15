@@ -1,8 +1,15 @@
+
+function usmap(){
 // get the svg object
-var svg = d3.select('#usmap');
+var width = window.innerWidth * 0.67,
+    height = window.innerHeight * 0.61;
+
+var svg = d3.select('#usmap')
+            .attr("width", width)
+            .attr("height", height);
 
 // load json data and draw US map
-d3.json('data/usstates.json', function (error, data) {
+d3.json('dataset/usstates.json', function (error, data) {
     var projection = d3.geo.albersUsa()
         .translate([svg.attr("width") / 2, svg.attr("height") / 2])
         .scale([svg.attr("width")]);
@@ -15,4 +22,6 @@ d3.json('data/usstates.json', function (error, data) {
         .append('path')
         .attr('d', path)
         .style({ fill: '#5f9ea0', stroke: 'black' });
-});
+});}
+
+usmap();

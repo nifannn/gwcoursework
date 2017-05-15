@@ -1,9 +1,12 @@
 // set canvas size and the location of plot
 var l_svg = d3.select("#line_svg"),
     l_margin = {top: 20, right: 100, bottom: 30, left: 50},
-    l_width = l_svg.attr("width") - l_margin.left - l_margin.right,
-    l_height = l_svg.attr("height") - l_margin.top - l_margin.bottom,
-    l_g = l_svg.append("g").attr("transform", "translate(" + l_margin.left + "," + l_margin.top + ")");
+    l_width = window.innerWidth * 0.67 - l_margin.left - l_margin.right,
+    l_height = window.innerHeight * 0.61 - l_margin.top - l_margin.bottom,
+    l_g = l_svg.attr("width", l_width + l_margin.left + l_margin.right)
+               .attr("height", l_height + l_margin.top + l_margin.bottom)
+               .append("g")
+               .attr("transform", "translate(" + l_margin.left + "," + l_margin.top + ")");
 
 // set date format
 var parseTime = d3.timeParse("%Y");
@@ -20,7 +23,7 @@ var line = d3.line()
     .y(function(d) { return l_y(d.cost); });
 
 // load data
-d3.csv("data/tuition_graduate.csv", function(error, data){
+d3.csv("dataset/tuition_graduate.csv", function(error, data){
     if (error) throw error;
     
     // change data format

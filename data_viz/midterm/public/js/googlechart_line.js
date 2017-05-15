@@ -1,5 +1,5 @@
 function drawVisualization() {
-   $.get("data/graduate_avg.csv", function(csvString) {
+   $.get("dataset/graduate_avg.csv", function(csvString) {
       // transform the CSV string into a 2-dimensional array
       var arrayData = $.csv.toArrays(csvString, {onParseValue: $.csv.hooks.castToScalar});
 
@@ -11,7 +11,7 @@ function drawVisualization() {
          containerId: 'linechart',
          dataTable: data,
          options:{
-            width: 980, height: 560,
+            width: window.innerWidht, height: window.innerHeight*0.61,
             title: 'Average Harvard Graduate Tuition',
             titleTextStyle : {color: 'grey', fontSize: 11},
          }

@@ -1,8 +1,8 @@
 // set canvas size
 var a_svg = d3.select("#area_svg"),
     a_margin = {top: 20, right: 20, bottom: 30, left: 50},
-    a_width = a_svg.attr("width") - a_margin.left - a_margin.right,
-    a_height = a_svg.attr("height") - a_margin.top - a_margin.bottom;
+    a_width = window.innerWidth * 0.67 - a_margin.left - a_margin.right,
+    a_height = window.innerHeight * 0.61 - a_margin.top - a_margin.bottom;
 
 // set date format
 var parseDate = d3.timeParse("%Y");
@@ -22,11 +22,13 @@ var area = d3.area()
     .y1(function(d) { return y(d[1]); });
 
 // set the chart location
-var a_g = a_svg.append("g")
-    .attr("transform", "translate(" + a_margin.left + "," + a_margin.top + ")");
+var a_g = a_svg.attr("width", a_width + a_margin.left + a_margin.right)
+               .attr("height", a_height + a_margin.top + a_margin.bottom)
+               .append("g")
+               .attr("transform", "translate(" + a_margin.left + "," + a_margin.top + ")");
 
 // load data
-d3.csv("data/undergraduate.csv", function(error, data) {
+d3.csv("dataset/undergraduate.csv", function(error, data) {
   if (error) throw error;
  
      // change the data format

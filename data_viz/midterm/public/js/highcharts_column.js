@@ -1,7 +1,7 @@
 $(function () {
 
     // load data
-    $.get('data/undergraduate_5years.csv', function(csv) {
+    $.get('dataset/undergraduate_5years.csv', function(csv) {
         // configure column chart
         $('#column').highcharts({
             chart: {

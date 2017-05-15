@@ -1,5 +1,5 @@
 function drawColumnChart() {
-   $.get("data/undergraduate_total.csv", function(csvString) {
+   $.get("dataset/undergraduate_total.csv", function(csvString) {
       // transform the CSV string into a 2-dimensional array
       var arrayData = $.csv.toArrays(csvString, {onParseValue: $.csv.hooks.castToScalar});
 
@@ -11,7 +11,7 @@ function drawColumnChart() {
          containerId: 'columnchart',
          dataTable: data,
          options:{
-            width: 980, height: 560,
+            width: window.innerWidht, height: window.innerHeight*0.61,
             title: 'Total Harvard Undergraduate Package',
             titleTextStyle : {color: 'grey', fontSize: 11},
          }
